@@ -1,11 +1,13 @@
 function searchAPI(event, genreId) {
   event.preventDefault();
 
-  var apiUrl = 'https://api.themoviedb.org/3/discover/movie?api_key=YOUR_API_KEY&with_genres=' + genreId;
+  var apiUrl = 'https://api.themoviedb.org/3/discover/movie?api_key=0a5329b198d874cdfd05a37c220a128b&with_genres=' + genreId;
+
+  
 
   fetch(apiUrl)
-  .then(function(responce) {
-      if (!responce.ok) {
+  .then(function(response) {
+      if (!response.ok) {
           throw new Error('Not Working');
       }
       return response.json();
@@ -16,7 +18,7 @@ function searchAPI(event, genreId) {
           var randomIndex = Math.floor(Math.random() * data.results.length);
           var randomMovie = data.results[randomIndex];
 
-          var movieDisplay = document.getElementById('movieDisplay'); //details of movie: CHECK FORMAT//
+          var movieDisplay = document.getElementById('movieDisplay'); //details of movie: Needs to be edited to match html//
           movieDisplay.innerHTML = ` 
             <h2>${randomMovie.title}</h2>
             <p>${randomMovie.overview}</p>
