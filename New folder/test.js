@@ -1,18 +1,23 @@
 document.getElementById('searchButton').addEventListener('click', function() { // select dropdown //
     var selectedGenre = document.getElementById('dropdown-genre').value;
     var selectedDecade = document.getElementById('dropdown-decade').value;
+    var originalLanguage = document.getElementById('original-language').value;
 
-    searchAPI(selectedGenre, selectedDecade);
+    searchAPI(selectedGenre, selectedDecade, originalLanguage);
 });
 
-function searchAPI(genreId, decade) {  // searching first for genre to take into account any date option //
-    var apiUrl = 'https://api.themoviedb.org/3/discover/movie?api_key=0a5329b198d874cdfd05a37c220a128b&with_genres=' + genreId + '&original_language=es';
+function searchAPI(genreId, decade, originalLanguage) {  // searching first for genre to take into account any date option //
+    var apiUrl = 'https://api.themoviedb.org/3/discover/movie?api_key=0a5329b198d874cdfd05a37c220a128b&with_genres=' + genreId;
 
     // then added the date option here //
     if (decade !== "Any") {
     var startDate = decade + '-01-01';
     var endDate = (parseInt(decade) + 9).toString() + '-12-31';
     apiUrl += '&primary_release_date.gte=' + startDate + '&primary_release_date.lte=' + endDate;
+    }
+
+    if (originalLanguage && originalLanguage !== "Any") {
+        apiUrl += '&with_original_language=' + originalLanguage;
     }
 
     fetch(apiUrl)
