@@ -42,6 +42,7 @@ function searchAPI(genreId, decade, originalLanguage) {  // searching first for 
                 <p>${randomMovie.overview}</p>
                 <img src="https://image.tmdb.org/t/p/w500${randomMovie.poster_path}" alt="${randomMovie.title}" />
             `;
+            localStorage.setItem('movieData', JSON.stringify(data));
         } else {
             document.getElementById('messageDisplay').innerText = "No movies found for the selected genre.";
         
@@ -51,3 +52,9 @@ function searchAPI(genreId, decade, originalLanguage) {  // searching first for 
         document.getElementById('messageDisplay').innerText = 'There was a problem with the fetch operation: ' + error.message;
     });
 }
+
+// I added this to be linked to history on main page //
+var savedData = JSON.parse(localStorage.getItem('movieData'));
+
+//included the clear be to be linked to index//
+localStorage.removeItem('movieData');
