@@ -6,7 +6,7 @@ document.getElementById('searchButton').addEventListener('click', function() { /
 });
 
 function searchAPI(genreId, decade) {  // searching first for genre to take into account any date option //
-    var apiUrl = 'https://api.themoviedb.org/3/discover/movie?api_key=0a5329b198d874cdfd05a37c220a128b&with_genres=' + genreId;
+    var apiUrl = 'https://api.themoviedb.org/3/discover/movie?api_key=0a5329b198d874cdfd05a37c220a128b&with_genres=' + genreId + '&original_language=es';
 
     // then added the date option here //
     if (decade !== "Any") {
