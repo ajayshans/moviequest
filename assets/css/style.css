@@ -1,0 +1,5 @@
+/* NOTE: The below will get removed during transition to tailwind CSS */
+.dropdown-container {
+    display: inline-block;
+    margin-right: 10px; /* Adjust the spacing between dropdowns */
+}

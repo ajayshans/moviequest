@@ -16,28 +16,75 @@
 
 <body>
     <header>
-        <h1>Movie Quest</h1>
-        <nav>
+        <h1 id = "page-title">MOVIE QUEST</h1>
+        <!-- Nav Bar -->
+        <nav class = nav-bar>
             <ul>
                 <li> <a href="#application">Application</a> </li>
                 <li> <a href="#history">Previous Results</a> </li>
             </ul>
         </nav>
     </header>
-
+    <br>
     <main>
         <!-- Intro -->
         <section id = "intro">
-            <p>Looking for something to watch? Movie Quest is here to help!</p>
+            <p>Looking for something to watch? Movie Quest is here to help! Enter your desired filters below to begin :)</p>
         </section>
+    <br>
         <!-- Current Search -->
         <section id = "application">
+            <!-- TODO: Add dropdowns using HTML. Replace later with Tailwind CSS Dropdown -->
+            <div class="dropdown-container">
+                <label for="dropdown-genre">Genre:</label>
+                <select id="dropdown-genre">
+                    <option value="optionAll">Any</option>
+                    <option value="option1">Drama</option>
+                    <option value="option2">Thriller</option>
+                    <option value="option3">Comedy</option>
+                    <option value="option4">Horror</option>
+                    <option value="option5">Documentaries</option>
+                    <option value="option6">Rom-com</option>
+                    <option value="option7">Action</option>
+                </select>
+            </div>
 
+            <div class="dropdown-container">
+                <label for="dropdown-release">Release Date:</label>
+                <select id="dropdown-release">
+                    <option value="optionAll">Any</option>
+                    <option value="option1">New Releases</option>
+                    <option value="option2">2010s</option>
+                    <option value="option3">2000s</option>
+                    <option value="option4">90s</option>
+                    <option value="option5">80s</option>
+                    <option value="option6">70s</option>
+                </select>
+            </div>
+
+            <div class="dropdown-container">
+                <label for="dropdown-lang">Language:</label>
+                <select id="dropdown-lang">
+                    <option value="optionAll">Any</option>
+                    <option value="option1">English</option>
+                    <option value="option2">Spanish</option>
+                    <option value="option3">Chinese</option>
+                    <option value="option4">Japanese</option>
+                    <option value="option5">Korean</option>
+                    <option value="option6">French</option>
+                    <option value="option6">Italian</option>
+                </select>
+            </div>
+            <br>
+            <br>
+            <button id = "submit-button">Find your movie!</button>
+            <br>
+            <button id = "history-button">View Historical Results</button>
         </section>
-
+    <br>
         <!-- Historical Results -->
         <section id = "history">
-            <h2>Recent Generations</h2>
+            <h2>Recent Results</h2>
             <ol id = "history-list"></ol>
         </section>
     </main>
