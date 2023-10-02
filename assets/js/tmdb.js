@@ -1,6 +1,9 @@
 // This consists of all Javascript related to The Movie Database Functions while working so testing can be conducted separately. This will be combined into a single JS towards the end of the project
 
 var movieTitle = []
+// Note: Want to be able to pass this through Youtube API
+var latestMovieTitle = movieTitle.slice(-1)[0];
+
 
 function searchAPI(event, genreId) {
     event.preventDefault();
@@ -22,6 +25,7 @@ function searchAPI(event, genreId) {
             // Step 4: Randomly select a movie from the results of the randomly selected page
             var randomIndex = Math.floor(Math.random() * data.results.length);
             var randomMovie = data.results[randomIndex];
+            // Below pushes the title of the generated movie to the movieTitle array
             movieTitle.push(randomMovie.title);
 
             var movieDisplay = document.getElementById('movieDisplay');
@@ -38,7 +42,4 @@ function searchAPI(event, genreId) {
     .catch(function(error) {
         document.getElementById('messageDisplay').innerText = 'There was a problem with the fetch operation: ' + error.message;
     });
-
-console.log(movieTitle.slice(-1)[0]);
-
 }
