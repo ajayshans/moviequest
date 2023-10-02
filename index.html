@@ -78,10 +78,16 @@
             <br>
             <br>
             <div class="sub-hist">
-            <button id = "submit-button">Find your movie!</button>
+                <!-- Have included in HTML for functionality. Ideally want this as Event Listener -->
+            <button id = "submit-button" onclick="searchAPI(event, 27)">Find your movie!</button>
             <br>
             <button id = "history-button">View Historical Results</button>
         </div>
+        </section>
+        <!-- Current Results -->
+        <section>
+            <div id="movieDisplay"></div>
+            <p id="messageDisplay"></p>
         </section>
     <br>
         <!-- Historical Results -->
