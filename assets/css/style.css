@@ -1,5 +1,66 @@
 /* NOTE: The below will get removed during transition to tailwind CSS */
+body {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 .dropdown-container {
     display: inline-block;
     margin-right: 10px; /* Adjust the spacing between dropdowns */
+    background-color: rgb(226, 85, 80);
+    color: black;
+}
+
+#page-title {margin: 100px;
+    padding: 20px;
+    text-align: center;
+    font-size: 500%;  
+    font-style: italic; 
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+#intro {
+    text-align: center;
+    font-size: 20px;
+}
+
+#application {padding: 30px;
+    text-align: center;
+}
+
+#submit-button {padding: 10px;
+    border: 2px solid white;
+    border-radius: 5px 5px 5px 5px;
+    background-color: rgb(250, 203, 73);
+    color: black;
+    margin-bottom: 10px;
+}
+
+#history-button {padding: 10px;
+    border: 2px solid white; 
+    border-radius: 5px 5px 5px 5px;
+    background-color: rgb(92, 50, 16);
+  
+    
+}
+
+#recent-results {padding: 10px;
+    text-align: center;
+    border-radius: 5px 5px 5px 5px;
+    font-size: 30px;
+    font-style: italic;
+   
+}
+
+#dropdown-genre {background-color: rgb(241, 240, 227);
+
+}
+
+#dropdown-release {
+    background-color: rgb(241, 240, 227);
+}
+
+#dropdown-lang {
+    background-color: rgb(241, 240, 227);
 }
