@@ -14,6 +14,7 @@ function getVideoURL(sampleTitle) {
         var vidID = data.items[0].id.videoId
         var trailerEmbedURL = "https://www.youtube.com/embed/" + vidID + "?enablejsapi=1"
         youtubePreview.setAttribute("src", trailerEmbedURL)
+        youtubePreview.setAttribute("style", "border: solid 4px #ffffff")
     })
     .catch(error => {
         console.error('There was a problem with the fetch operation:', error.message);
