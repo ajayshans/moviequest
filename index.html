@@ -8,13 +8,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Movie Quest</title>
     <!-- Link to Tailwind CSS Framework. This is with Play CDN - may need an UPDATE -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Links for reset and non-framework CSS Styling -->
-    <link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
-    <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+
+<link href="./dist/output.css" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+NKo+Unjoined&display=swap" rel="stylesheet">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rowdies&display=swap" rel="stylesheet">
+
+<!-- Links for reset and non-framework CSS Styling -->
+<link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
+<link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
 </head>
 
 <body>
+        <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
+            <div id="player"></div>
     <header>
         <h1 id = "page-title" class = "text-3xl font-bold">MOVIE QUEST</h1>
         <!-- Nav Bar -->
@@ -28,8 +42,9 @@
     <br>
     <main>
         <!-- Intro -->
-        <section id = "intro">
-            <p>Looking for something to watch? Movie Quest is here to help! Enter your desired filters below to begin 😊</p>
+        <section>
+            <p id= "intro">Looking for something to watch? Movie Quest is here to help! 
+                <br> Enter your desired filters below to begin.</p>
         </section>
     <br>
         <!-- Current Search -->
@@ -80,7 +95,7 @@
             <div class="sub-hist">
             <button id = "submit-button">Find your movie!</button>
             <br>
-            <button id = "history-button">View Historical Results</button>
+            <button id = "history-button" a href="assets/results.html">View Historical Results</button>
         </div>
         </section>
     <br>
@@ -93,9 +108,9 @@
     <!-- Embed script.js in body -->
     <script src="script.js"></script>
     <!-- Embed tmdb.js in body-->
-    <script src="tmdb.js"></script>
+    <script src="./assets/js/tmdb.js"></script>
     <!-- Embed youtube.js in body-->
-    <script src="youtube.js"></script>
+    <script src="./assets/js/youtube.js"></script>
 </body>
 
 </html>
