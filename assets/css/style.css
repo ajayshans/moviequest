@@ -41,7 +41,7 @@ body {
 #submit-button {padding: 10px;
     border: 2px solid white;
     border-radius: 5px 5px 5px 5px;
-    background-color: rgb(250, 229, 136);
+    background-color: rgb(255, 253, 107);
     color: black;
     margin-bottom: 10px;
     font-family: 'Manrope', sans-serif;
@@ -49,10 +49,17 @@ body {
 
 }
 
+#submit-button:hover {
+    background: #dfff0d;
+  }
+
+#history-button:hover {
+    background: #c03131;
+  }
 #history-button {padding: 10px;
     border: 2px solid white; 
     border-radius: 5px 5px 5px 5px;
-    background-color: rgb(165, 154, 146);
+    background-color: rgb(219, 109, 36);
     font-family: 'Dancing Script', cursive;
     font-family: 'Inclusive Sans', sans-serif;
     font-family: 'Playfair Display', serif;
@@ -69,8 +76,8 @@ body {
    
 }
 
-#dropdown-genre {background-color: rgb(253, 253, 253);
-
+#dropdown-genre {border: 2px solid white;
+   
 }
 
 #dropdown-release {
