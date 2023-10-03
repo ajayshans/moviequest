@@ -16,27 +16,27 @@
 
 <body>
     <header>
-        <h1 id = "page-title" class = "text-3xl">MOVIE QUEST</h1>
+        <h1 id = "page-title" class = "text-3xl font-bold">MOVIE QUEST</h1>
         <!-- Nav Bar -->
-        <nav class = nav-bar>
+        <!-- <nav class = nav-bar>
             <ul>
-                <li> <a href="#application">Application</a> </li>
+                <li class=""> <a href="#application">Application</a> </li>
                 <li> <a href="#history">Previous Results</a> </li>
             </ul>
-        </nav>
+        </nav> -->
     </header>
     <br>
     <main>
         <!-- Intro -->
         <section id = "intro">
-            <p>Looking for something to watch? Movie Quest is here to help! Enter your desired filters below to begin :)</p>
+            <p>Looking for something to watch? Movie Quest is here to help! Enter your desired filters below to begin 😊</p>
         </section>
     <br>
         <!-- Current Search -->
         <section id = "application">
             <!-- TODO: Add dropdowns using HTML. Replace later with Tailwind CSS Dropdown -->
             <div class="dropdown-container">
-                <label for="dropdown-genre">Genre:</label>
+                <label id="genre" for="dropdown-genre">Genre:</label>
                 <select id="dropdown-genre">
                     <option value="">Any</option>
                     <option value="18">Drama</option>
@@ -77,14 +77,16 @@
             </div>
             <br>
             <br>
+            <div class="sub-hist">
             <button id = "submit-button">Find your movie!</button>
             <br>
             <button id = "history-button">View Historical Results</button>
+        </div>
         </section>
     <br>
         <!-- Historical Results -->
-        <section id = "history">
-            <h2>Recent Results</h2>
+        <section>
+            <h2 id ="recent-results">Recent Results:</h2>
             <ol id = "history-list"></ol>
         </section>
     </main>
