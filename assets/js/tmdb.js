@@ -1,4 +1,4 @@
-document.getElementById('searchButton').addEventListener('click', function() { // select dropdown //
+document.getElementById('submit-button').addEventListener('click', function() { // select dropdown //
     var selectedGenre = document.getElementById('dropdown-genre').value;
     var selectedDecade = document.getElementById('dropdown-release').value;
     var originalLanguage = document.getElementById('dropdown-lang').value;
