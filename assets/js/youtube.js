@@ -19,3 +19,5 @@ function getVideoURL(sampleTitle) {
         console.error('There was a problem with the fetch operation:', error.message);
     })
 };
+
+getVideoURL(Test);
