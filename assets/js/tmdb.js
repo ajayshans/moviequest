@@ -42,7 +42,12 @@ function searchAPI(genreId, decade, originalLanguage) {  // searching first for 
                 <p>${randomMovie.overview}</p>
                 <img src="https://image.tmdb.org/t/p/w500${randomMovie.poster_path}" alt="${randomMovie.title}" />
             `;
-            localStorage.setItem('movieData', JSON.stringify(data));
+
+            // save data //
+            var savedMovies = JSON.parse(localStorage.getItem('movieData')) || [];
+            savedMovies.unshift(randomMovie);
+            savedMovies = savedMovies.slice(0, 5);
+            localStorage.setItem('movieData', JSON.stringify(savedMovies));
         }
     })
     .catch(function(error) {
@@ -50,8 +55,36 @@ function searchAPI(genreId, decade, originalLanguage) {  // searching first for 
     });
 }
 
-// I added this to be linked to history on main page //
-var savedData = JSON.parse(localStorage.getItem('movieData'));
+// historical results //
+
+document.getElementById('history-button').addEventListener('click', function() { 
+    try {
+        var savedMovies = JSON.parse(localStorage.getItem('movieData'));
+
+        if (savedMovies && savedMovies.length > 0) {
+            var movieDisplay = document.getElementById('recent-results');
+            movieDisplay.innerHTML = savedMovies.map(movie => `
+                <h2>${movie.title}</h2>
+                <p>${movie.overview}</p>
+                <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}" />
+            `).join('');
+        } else {
+            document.getElementById('recent-results').innerText = "No movie data found.";
+        }
+    } catch (e) {
+        console.error('An error occurred:', e);
+        document.getElementById('recent-results').innerText = "Error Error Where is my Data?!?";
+    }
+});
+
 
 //included the clear be to be linked to index//
-localStorage.removeItem('movieData');
+
+document.getElementById('clear-history').addEventListener('click', function() { 
+    localStorage.removeItem('movieData');
+    document.getElementById('recent-results').innerText = " ";
+});        
+//page saves history
+// button clicks
+// retrievs history
+// displays history
