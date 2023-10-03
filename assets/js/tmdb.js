@@ -17,7 +17,7 @@ function getVideoURL(sampleTitle) {
         youtubePreview.setAttribute("style", "border: solid 4px #ffffff")
     })
     .catch(error => {
-        console.error('There was a problem with the fetch operation:', error.message);
+        console.error('There was a problem with the fetch operation:' + error.message);
     })
 };
 
