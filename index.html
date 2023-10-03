@@ -52,13 +52,19 @@
             <div class="dropdown-container">
                 <label for="dropdown-release">Release Date:</label>
                 <select id="dropdown-release">
-                    <option value="any">Any</option>
-                    <option value="new-release">New Releases</option>
-                    <option value="tens">2010s</option>
-                    <option value="noughties">2000s</option>
-                    <option value="nineties">90s</option>
-                    <option value="eighties">80s</option>
-                    <option value="seventies">70s</option>
+                    <option value="Any">Any</option>
+                    <option value="1910">1910's</option>
+                    <option value="1920">1920's</option>
+                    <option value="1930">1930's</option>
+                    <option value="1940">1940's</option>
+                    <option value="1950">1950's</option>
+                    <option value="1960">1960's</option>
+                    <option value="1970">1970's</option>
+                    <option value="1980">1980's</option>
+                    <option value="1990">1990's</option>
+                    <option value="2000">2000's</option>
+                    <option value="2010">2010's</option>
+                    <option value="2020">2020's</option>
                 </select>
             </div>
 
@@ -66,34 +72,43 @@
                 <label for="dropdown-lang">Language:</label>
                 <select id="dropdown-lang">
                     <option value="any">Any</option>
-                    <option value="english">English</option>
-                    <option value="spanish">Spanish</option>
-                    <option value="chinese">Chinese</option>
-                    <option value="japanese">Japanese</option>
-                    <option value="korean">Korean</option>
-                    <option value="french">French</option>
-                    <option value="italian">Italian</option>
+                    <option value="en">English</option>
+                    <option value="es">Spanish</option>
+                    <option value="zh">Chinese</option>
+                    <option value="ja">Japanese</option>
+                    <option value="ko">Korean</option>
+                    <option value="fr">French</option>
+                    <option value="de">Germany</option>
+                    <option value="it">Italian</option>
+                    <option value="hi">Hindi</option>
+                    <option value="te">Telugu</option>
+                    <option value="id">Indonesian</option>
                 </select>
             </div>
             <br>
             <br>
             <div class="sub-hist">
-            <button id = "submit-button">Find your movie!</button>
+            <button id="searchButton">Find your movie!</button>
             <br>
-            <button id = "history-button">View Historical Results</button>
+            <button id="history-button">View Historical Results</button>
         </div>
         </section>
     <br>
+    
+        <div id="movieDisplay"></div>
+
+        <p id="messageDisplay"></p>
+
         <!-- Historical Results -->
         <section>
             <h2 id ="recent-results">Recent Results:</h2>
             <ol id = "history-list"></ol>
         </section>
     </main>
+    <!-- Embed tmdb.js in body-->
+    <script src="assets/js/tmdb.js"></script>
     <!-- Embed script.js in body -->
     <script src="script.js"></script>
-    <!-- Embed tmdb.js in body-->
-    <script src="tmdb.js"></script>
     <!-- Embed youtube.js in body-->
     <script src="youtube.js"></script>
 </body>
