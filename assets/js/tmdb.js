@@ -114,5 +114,3 @@ document.getElementById('clear-history').addEventListener('click', function() {
 // button clicks
 // retrievs history
 // displays history
-
-var movieTitle = [];
