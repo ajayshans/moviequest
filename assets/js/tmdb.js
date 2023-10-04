@@ -88,14 +88,14 @@ document.getElementById('history-button').addEventListener('click', function() {
         var savedMovies = JSON.parse(localStorage.getItem('movieData'));
 
         if (savedMovies && savedMovies.length > 0) {
-            var movieDisplay = document.getElementById('recent-results');
+            var movieDisplay = document.getElementById('history-list');
             movieDisplay.innerHTML = savedMovies.map(movie => `
                 <h2>${movie.title}</h2>
                 <p>${movie.overview}</p>
                 <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}" />
             `).join('');
         } else {
-            document.getElementById('recent-results').innerText = "No movie data found.";
+            document.getElementById('history-list').innerText = "No movie data found.";
         }
     } catch (e) {
         console.error('An error occurred:', e);
@@ -108,7 +108,7 @@ document.getElementById('history-button').addEventListener('click', function() {
 
 document.getElementById('clear-history').addEventListener('click', function() { 
     localStorage.removeItem('movieData');
-    document.getElementById('recent-results').innerText = " ";
+    document.getElementById('history-list').innerText = " ";
 });
 //page saves history
 // button clicks
