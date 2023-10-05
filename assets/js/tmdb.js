@@ -34,7 +34,7 @@ function searchAPI(genreId, decade, originalLanguage) {  // searching first for 
     lastGenreId = genreId;
     lastDecade = decade;
     lastOriginalLanguage = originalLanguage;
-
+    
     var apiUrl = 'https://api.themoviedb.org/3/discover/movie?api_key=0a5329b198d874cdfd05a37c220a128b&with_genres=' + genreId;
 
     // then added the date option here //
@@ -90,8 +90,10 @@ function searchAPI(genreId, decade, originalLanguage) {  // searching first for 
 }
 
 // historical results //
+document.getElementById('recent-results').classList.add('hidden');
 
 function displaySavedMovies() {
+    document.getElementById('recent-results').style.display = 'block';
     try {
         var savedMovies = JSON.parse(localStorage.getItem('movieData'));
 
