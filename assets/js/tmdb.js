@@ -1,3 +1,26 @@
+var movieTitle = [];
+var latestMovieTitle;
+
+var youtubePreview = document.getElementById('youtube-preview')
+
+function getVideoURL(sampleTitle) {
+    var ytApiKey = "AIzaSyB8PzB4thIJ1yyzTuJhkEhy3FlEEIZVsJg"
+    searchInput = sampleTitle.toLowerCase().replace(" ", "+") + "+movie+trailer"
+    var searchResult = "https://www.googleapis.com/youtube/v3/search?key=" + ytApiKey + "&part=snippet&type=video&q=" + searchInput;
+
+    fetch(searchResult)
+    .then(response => response.json())
+    .then(data => {
+        var vidID = data.items[0].id.videoId
+        var trailerEmbedURL = "https://www.youtube.com/embed/" + vidID + "?enablejsapi=1"
+        youtubePreview.setAttribute("src", trailerEmbedURL)
+        youtubePreview.setAttribute("style", "border: solid 4px #ffffff")
+    })
+    .catch(error => {
+        console.error('There was a problem with the fetch operation:' + error.message);
+    })
+};
+
 document.getElementById('submit-button').addEventListener('click', function() { // select dropdown //
     var selectedGenre = document.getElementById('dropdown-genre').value;
     var selectedDecade = document.getElementById('dropdown-release').value;
@@ -35,6 +58,9 @@ function searchAPI(genreId, decade, originalLanguage) {  // searching first for 
             // Randomly select a movie from the results of the randomly selected page
             var randomIndex = Math.floor(Math.random() * data.results.length);
             var randomMovie = data.results[randomIndex];
+            movieTitle.push(randomMovie.title);
+            latestMovieTitle = movieTitle.slice(-1)[0];
+            getVideoURL(latestMovieTitle);
 
             var movieDisplay = document.getElementById('movieDisplay');
             movieDisplay.innerHTML = ` 
@@ -42,7 +68,12 @@ function searchAPI(genreId, decade, originalLanguage) {  // searching first for 
                 <p>${randomMovie.overview}</p>
                 <img src="https://image.tmdb.org/t/p/w500${randomMovie.poster_path}" alt="${randomMovie.title}" />
             `;
-            localStorage.setItem('movieData', JSON.stringify(data));
+
+            // save data //
+            var savedMovies = JSON.parse(localStorage.getItem('movieData')) || [];
+            savedMovies.unshift(randomMovie);
+            savedMovies = savedMovies.slice(0, 5);
+            localStorage.setItem('movieData', JSON.stringify(savedMovies));
         }
     })
     .catch(function(error) {
@@ -50,8 +81,36 @@ function searchAPI(genreId, decade, originalLanguage) {  // searching first for 
     });
 }
 
-// I added this to be linked to history on main page //
-var savedData = JSON.parse(localStorage.getItem('movieData'));
+// historical results //
+
+document.getElementById('history-button').addEventListener('click', function() { 
+    try {
+        var savedMovies = JSON.parse(localStorage.getItem('movieData'));
+
+        if (savedMovies && savedMovies.length > 0) {
+            var movieDisplay = document.getElementById('history-list');
+            movieDisplay.innerHTML = savedMovies.map(movie => `
+                <h2>${movie.title}</h2>
+                <p>${movie.overview}</p>
+                <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}" />
+            `).join('');
+        } else {
+            document.getElementById('history-list').innerText = "No movie data found.";
+        }
+    } catch (e) {
+        console.error('An error occurred:', e);
+        document.getElementById('recent-results').innerText = "Error Error Where is my Data?!?";
+    }
+});
+
 
 //included the clear be to be linked to index//
-localStorage.removeItem('movieData');
+
+document.getElementById('clear-history').addEventListener('click', function() { 
+    localStorage.removeItem('movieData');
+    document.getElementById('history-list').innerText = " ";
+});
+//page saves history
+// button clicks
+// retrievs history
+// displays history
