@@ -16,7 +16,7 @@
 
 <body>
     <header>
-        <h1 id = "page-title" class = "text-3xl font-bold">MOVIE QUEST 🧙‍♂️</h1>
+        <h1 id = "page-title" class = "text-3xl font-bold">MOVIE QUEST</h1>
         <!-- Nav Bar -->
         <!-- <nav class = nav-bar>
             <ul>
@@ -96,30 +96,10 @@
         </div>
         </section>
     <br>
+    
+        <div id="movieDisplay"></div>
 
-        <!-- Post Search Result Buttons -->
-        <section>
-            <div class="return-buttons">
-                <button id="search-again">Search again!</button>
-                <br>
-                <button id="return-button">Back to search!</button>
-            </div>
-        </section>
-
-
-        <!-- Current Results -->
-        <section>
-            <h2>SYNOPSIS</h2>
-            <div id="movieDisplay"></div>
-            <p id="messageDisplay"></p>
-            <br>
-            <h2>VIDEO PREVIEW</h2>
-            <!-- Note: src attribute URL is placeholder. Needs to be removed -->
-            <iframe id="youtube-preview"
-                width="640" height="360"
-                frameborder="0"
-            ></iframe>
-        </section>
+        <p id="messageDisplay"></p>
 
         <!-- Historical Results -->
         <section>
@@ -130,9 +110,9 @@
     <!-- Embed tmdb.js in body-->
     <script src="assets/js/tmdb.js"></script>
     <!-- Embed script.js in body -->
-    <!-- <script src="script.js"></script> -->
+    <script src="script.js"></script>
     <!-- Embed youtube.js in body-->
-    <!-- <script src="assets/js/youtube.js"></script> -->
+    <script src="youtube.js"></script>
 </body>
 
 </html>
