@@ -4,7 +4,7 @@
 
 /* NOTE: The below will get removed during transition to tailwind CSS */
 body {
-    background: linear-gradient(rgb(0, 0, 0), rgb(31, 31, 31));
+    background-color: rgb(26, 25, 25);
     /* color: rgb(255, 255, 255); */
     font-family: 'Hind Siliguri', sans-serif;
     /* font-weight: 200%; */
@@ -78,6 +78,11 @@ body {
     /* border-radius: 5px 5px 5px 5px; */
     /* font-size: 30px; */
     /* font-style: italic; */
+}
+
+#movieDisplay {
+
+    font-size: 20px;
 }
 
 #dropdown-genre {
