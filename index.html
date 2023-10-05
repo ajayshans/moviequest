@@ -2,11 +2,20 @@
 <html lang="en">
 
 <!-- Metadata + Linking CSS/3rd Party APIs -->
+
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Movie Quest</title>
+    <!-- Google Font API links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo+Play:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri&display=swap" rel="stylesheet">
     <!-- Link to Tailwind CSS Framework. This is with Play CDN - may need an UPDATE -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Links for reset and non-framework CSS Styling -->
@@ -14,9 +23,9 @@
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
 </head>
 
-<body>
+<body class="bg-black text-white font-extralight">
     <header>
-        <h1 id = "page-title" class = "text-3xl font-bold">MOVIE QUEST 🧙‍♂️</h1>
+        <h1 id = "page-title" class = "drop-shadow-2xl text text-center font-Rowdies text-8xl font-bold my-16 p-1">Movie Quest 🧙‍♂️</h1>
         <!-- Nav Bar -->
         <!-- <nav class = nav-bar>
             <ul>
@@ -28,16 +37,17 @@
     <br>
     <main>
         <!-- Intro -->
-        <section id = "intro">
-            <p>Looking for something to watch? Movie Quest is here to help! Enter your desired filters below to begin 😊</p>
+        <section id = "intro" class ="text-xl leading-7 text-center">
+            <p>Looking for something to watch? <br>
+                Movie Quest is here to help! Enter your desired filters below to begin.</p>
         </section>
     <br>
         <!-- Current Search -->
-        <section id = "application">
+        <section id = "application" class="text-center">
             <!-- TODO: Add dropdowns using HTML. Replace later with Tailwind CSS Dropdown -->
-            <div class="dropdown-container">
-                <label id="genre" for="dropdown-genre">Genre:</label>
-                <select id="dropdown-genre">
+            <div class="dropdown-container inline inline-block p-1">
+                <label id="genre" for="dropdown-genre" class="font-semibold bg-red-600 p-1 inline-block text-black font-sans text-base">Genre:</label>
+                <select id="dropdown-genre" class="text-white bg-black">
                     <option value="Any">Any</option>
                     <option value="18">Drama</option>
                     <option value="53">Thriller</option>
@@ -50,8 +60,8 @@
             </div>
 
             <div class="dropdown-container">
-                <label for="dropdown-release">Release Date:</label>
-                <select id="dropdown-release">
+                <label id="release" for="dropdown-release" class="font-semibold bg-red-600 p-1 inline-block text-black font-sans text-base">Release Date:</label>
+                <select id="dropdown-release" class="text-white bg-black">
                     <option value="Any">Any</option>
                     <option value="1910">1910's</option>
                     <option value="1920">1920's</option>
@@ -69,8 +79,8 @@
             </div>
 
             <div class="dropdown-container">
-                <label for="dropdown-lang">Language:</label>
-                <select id="dropdown-lang">
+                <label for="dropdown-lang" class="font-semibold bg-red-600 p-1 inline-block text-black font-sans text-base">Language:</label>
+                <select id="dropdown-lang" class="text-white bg-black">
                     <option value="Any">Any</option>
                     <option value="en">English</option>
                     <option value="es">Spanish</option>
@@ -88,9 +98,9 @@
             <br>
             <br>
             <div class="sub-hist">
-            <button id = "submit-button">Find your movie!</button>
+            <button id = "submit-button" class="opacity-100 dark:md:hover:bg-yellow-50 p-1.5 bg-yellow-300 text-black mb-3 font-sans-serif font-thin">Find Your Movie!</button>
             <br>
-            <button id="history-button">View Historical Results</button>
+            <button id="history-button" class=" dark:md:hover:bg-yellow-50 p-1.5 bg-orange-300 text-black font-thin">View Historical Results</button>
             <br>
             <button id="clear-history">clear history</button> <!--used for testing-->
         </div>
@@ -113,7 +123,7 @@
 
         <!-- Historical Results -->
         <section>
-            <h2 id ="recent-results">Recent Results:</h2>
+            <h2 id ="recent-results" class="text-center italic text-3xl underline underline-offset-8 rounded p-10">Recent Results:</h2>
             <ol id = "history-list"></ol>
         </section>
     </main>
@@ -122,7 +132,6 @@
     <!-- Embed script.js in body -->
     <!-- <script src="script.js"></script> -->
     <!-- Embed youtube.js in body-->
-    <!-- <script src="assets/js/youtube.js"></script> -->
 </body>
 
 </html>
