@@ -1,3 +1,26 @@
+var movieTitle = [];
+var latestMovieTitle;
+
+var youtubePreview = document.getElementById('youtube-preview')
+
+function getVideoURL(sampleTitle) {
+    var ytApiKey = "AIzaSyB8PzB4thIJ1yyzTuJhkEhy3FlEEIZVsJg"
+    searchInput = sampleTitle.toLowerCase().replace(" ", "+") + "+movie+trailer"
+    var searchResult = "https://www.googleapis.com/youtube/v3/search?key=" + ytApiKey + "&part=snippet&type=video&q=" + searchInput;
+
+    fetch(searchResult)
+    .then(response => response.json())
+    .then(data => {
+        var vidID = data.items[0].id.videoId
+        var trailerEmbedURL = "https://www.youtube.com/embed/" + vidID + "?enablejsapi=1"
+        youtubePreview.setAttribute("src", trailerEmbedURL)
+        youtubePreview.setAttribute("style", "border: solid 4px #ffffff")
+    })
+    .catch(error => {
+        console.error('There was a problem with the fetch operation:' + error.message);
+    })
+};
+
 document.getElementById('submit-button').addEventListener('click', function() { // select dropdown //
     var selectedGenre = document.getElementById('dropdown-genre').value;
     var selectedDecade = document.getElementById('dropdown-release').value;
@@ -35,6 +58,9 @@ function searchAPI(genreId, decade, originalLanguage) {  // searching first for 
             // Randomly select a movie from the results of the randomly selected page
             var randomIndex = Math.floor(Math.random() * data.results.length);
             var randomMovie = data.results[randomIndex];
+            movieTitle.push(randomMovie.title);
+            latestMovieTitle = movieTitle.slice(-1)[0];
+            getVideoURL(latestMovieTitle);
 
             var movieDisplay = document.getElementById('movieDisplay');
             movieDisplay.innerHTML = ` 
@@ -62,14 +88,14 @@ document.getElementById('history-button').addEventListener('click', function() {
         var savedMovies = JSON.parse(localStorage.getItem('movieData'));
 
         if (savedMovies && savedMovies.length > 0) {
-            var movieDisplay = document.getElementById('recent-results');
+            var movieDisplay = document.getElementById('history-list');
             movieDisplay.innerHTML = savedMovies.map(movie => `
                 <h2>${movie.title}</h2>
                 <p>${movie.overview}</p>
                 <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}" />
             `).join('');
         } else {
-            document.getElementById('recent-results').innerText = "No movie data found.";
+            document.getElementById('history-list').innerText = "No movie data found.";
         }
     } catch (e) {
         console.error('An error occurred:', e);
@@ -82,8 +108,8 @@ document.getElementById('history-button').addEventListener('click', function() {
 
 document.getElementById('clear-history').addEventListener('click', function() { 
     localStorage.removeItem('movieData');
-    document.getElementById('recent-results').innerText = " ";
-});        
+    document.getElementById('history-list').innerText = " ";
+});
 //page saves history
 // button clicks
 // retrievs history
