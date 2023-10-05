@@ -77,7 +77,8 @@ function searchAPI(genreId, decade, originalLanguage) {  // searching first for 
 
             document.getElementById('intro').classList.add('hidden');
             document.getElementById('application').classList.add('hidden');
-
+            document.getElementById('retry-button').style.display = 'block';
+            document.getElementById('return-button').style.display = 'block';
 
         }
     })
@@ -108,9 +109,16 @@ document.getElementById('history-button').addEventListener('click', function() {
     }
 });
 
-// post seacrh buttons //
-document.getElementById('search-again').classList.add('hidden');
+// post search buttons //
+document.getElementById('retry-button').classList.add('hidden');
 document.getElementById('return-button').classList.add('hidden');
+
+document.getElementById('return-button').addEventListener('click', function() { 
+    document.getElementById('intro').classList.remove('hidden');
+    document.getElementById('application').classList.remove('hidden');
+    document.getElementById('retry-button').style.display = 'none';
+    document.getElementById('return-button').style.display = 'none';
+});
 
 
 
