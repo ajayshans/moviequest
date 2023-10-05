@@ -4,22 +4,21 @@
 
 /* NOTE: The below will get removed during transition to tailwind CSS */
 body {
-    background: linear-gradient(rgb(0, 0, 0), rgb(31, 31, 31));
+    background-color:black;
     /* color: rgb(255, 255, 255); */
     font-family: 'Hind Siliguri', sans-serif;
     /* font-weight: 200%; */
 }
 
-#intro {
-}
+/* #intro {
+} */
 
 .dropdown-container {
     display: inline-block;
     border: 3px solid rgb(235, 235, 235);
     border-radius: 5px 5px 5px 5px;
     padding: 0;
-  
-    /* margin-right: 10px; Adjust the spacing between dropdowns */
+    margin-right: 10px; 
     /* background-color: rgb(249, 52, 52); */
     /* color: black; */
     /* font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
@@ -51,7 +50,6 @@ body {
     /* margin-bottom: 10px; */
     font-family: 'Hind Siliguri', sans-serif;
     /* font-weight: 100%; */
-
 }
 /* 
 #submit-button:hover {
@@ -72,13 +70,21 @@ body {
     
 }
 
-#recent-results {
+#movieDisplay {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+
+}
+
+/* #recent-results {
     /* padding: 10px; */
     /* text-align: center; */
     /* border-radius: 5px 5px 5px 5px; */
     /* font-size: 30px; */
     /* font-style: italic; */
-}
+/* }
 
 #dropdown-genre {
    
@@ -93,11 +99,11 @@ body {
 
 #dropdown-release {
     /* background-color: rgb(255, 255, 255); */
-}
+/* }
 
 #dropdown-lang {
     /* background-color: rgb(255, 255, 255); */
-}
+/* }
 
 
-/* CSS for results.html*/
+CSS for results.html */ 
