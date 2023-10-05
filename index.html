@@ -16,7 +16,7 @@
 
 <body>
     <header>
-        <h1 id = "page-title" class = "text-3xl font-bold">MOVIE QUEST</h1>
+        <h1 id = "page-title" class = "text-3xl font-bold">MOVIE QUEST 🧙‍♂️</h1>
         <!-- Nav Bar -->
         <!-- <nav class = nav-bar>
             <ul>
@@ -39,7 +39,7 @@
             <div class="dropdown-container">
                 <label id="genre" for="dropdown-genre">Genre:</label>
                 <select id="dropdown-genre">
-                    <option value="">Any</option>
+                    <option value="Any">Any</option>
                     <option value="18">Drama</option>
                     <option value="53">Thriller</option>
                     <option value="35">Comedy</option>
@@ -72,7 +72,7 @@
             <div class="dropdown-container">
                 <label for="dropdown-lang">Language:</label>
                 <select id="dropdown-lang">
-                    <option value="any">Any</option>
+                    <option value="Any">Any</option>
                     <option value="en">English</option>
                     <option value="es">Spanish</option>
                     <option value="zh">Chinese</option>
@@ -92,13 +92,25 @@
             <button id = "submit-button">Find Your Movie!</button>
             <br>
             <button id="history-button">View Historical Results</button>
+            <br>
+            <button id="clear-history">clear history</button> <!--used for testing-->
         </div>
         </section>
     <br>
     
-        <div id="movieDisplay"></div>
-
-        <p id="messageDisplay"></p>
+        <!-- Current Results -->
+        <section>
+            <h2>SYNOPSIS</h2>
+            <div id="movieDisplay"></div>
+            <p id="messageDisplay"></p>
+            <br>
+            <h2>VIDEO PREVIEW</h2>
+            <!-- Note: src attribute URL is placeholder. Needs to be removed -->
+            <iframe id="youtube-preview"
+                width="640" height="360"
+                frameborder="0"
+            ></iframe>
+        </section>
 
         <!-- Historical Results -->
         <section>
@@ -109,9 +121,9 @@
     <!-- Embed tmdb.js in body-->
     <script src="assets/js/tmdb.js"></script>
     <!-- Embed script.js in body -->
-    <script src="script.js"></script>
+    <!-- <script src="script.js"></script> -->
     <!-- Embed youtube.js in body-->
-    <script src="youtube.js"></script>
+    <!-- <script src="assets/js/youtube.js"></script> -->
 </body>
 
 </html>
