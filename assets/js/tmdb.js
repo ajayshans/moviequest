@@ -5,7 +5,7 @@ var lastGenreId, lastDecade, lastOriginalLanguage;
 var youtubePreview = document.getElementById('youtube-preview')
 
 function getVideoURL(sampleTitle) {
-    var ytApiKey = "AIzaSyB8PzB4thIJ1yyzTuJhkEhy3FlEEIZVsJg"
+    var ytApiKey = "AIzaSyCgh0yjkM8kJ9Pb3eEal4iKYSrUww4_3Ks"
     searchInput = sampleTitle.toLowerCase().replace(" ", "+") + "+movie+trailer"
     var searchResult = "https://www.googleapis.com/youtube/v3/search?key=" + ytApiKey + "&part=snippet&type=video&q=" + searchInput;
 
