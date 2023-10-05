@@ -74,6 +74,11 @@ function searchAPI(genreId, decade, originalLanguage) {  // searching first for 
             savedMovies.unshift(randomMovie);
             savedMovies = savedMovies.slice(0, 5);
             localStorage.setItem('movieData', JSON.stringify(savedMovies));
+
+            document.getElementById('intro').classList.add('hidden');
+            document.getElementById('application').classList.add('hidden');
+
+
         }
     })
     .catch(function(error) {
@@ -102,6 +107,11 @@ document.getElementById('history-button').addEventListener('click', function() {
         document.getElementById('recent-results').innerText = "Error Error Where is my Data?!?";
     }
 });
+
+// post seacrh buttons //
+document.getElementById('search-again').classList.add('hidden');
+document.getElementById('return-button').classList.add('hidden');
+
 
 
 //included the clear be to be linked to index//
