@@ -89,7 +89,8 @@ body {
 }
 
 
-#youtubeVideo{display: block;
+#youtubeVideo{
+    display: block;
     margin-left:auto;
     margin-right: auto; 
 }
