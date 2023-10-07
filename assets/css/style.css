@@ -93,6 +93,12 @@ background-color: rgb(180, 123, 123);
 
 }
 
+#youtube-preview {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /* #recent-results {
     /* padding: 10px; */
     /* text-align: center; */
