@@ -83,6 +83,14 @@ background-color: rgb(180, 123, 123);
     background: rgb(250, 252, 232);
 }
 
+.result-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 20px; /* Adjust the margin as needed */
+}
+
 #movieDisplay {
     font-size: 20px;
     font-weight: bold;
