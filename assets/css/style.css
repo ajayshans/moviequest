@@ -67,8 +67,33 @@ body {
     /* background-color: rgb(185, 88, 15); */
     font-family: 'Hind Siliguri', sans-serif;
     /* font-weight: 80%; */
-    /* margin-bottom: 10px; */
     
+}
+
+#movieDisplay {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+
+}
+
+#movieDisplay img {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+#youtube-preview { font-size: 20px;
+    font-weight: bold;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 }
 
 #clear-history {
@@ -79,33 +104,18 @@ border-radius: 5px 5px 5px 5px;
 background-color: rgb(180, 123, 123);
 }
 
-
 #clear-history:hover {
-    background: rgb(250, 252, 232);
+    background-color: rgb(250, 252, 232);
 }
 
-.result-container {
-    display: flex;
-    flex-direction: row; 
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-top: 20px;
+#history-parent {
+  text-align: center;
+
 }
 
-
-#movieDisplay {
-    font-size: 20px;
-    font-weight: bold;
-    display: block;
-    margin-left: auto;
-    margin-right: auto; 
-     width: 50%; 
- }  
-
-#youtube-preview {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+.history-child {
+    display: inline-block;
+    vertical-align: middle;
 }
 
 /* #recent-results {
