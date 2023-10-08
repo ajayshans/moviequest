@@ -18,7 +18,7 @@ body {
     border: 3px solid rgb(235, 235, 235);
     border-radius: 5px 5px 5px 5px;
     padding: 0;
-    margin-right: 10px; 
+    margin-right: 25px; 
     /* background-color: rgb(249, 52, 52); */
     /* color: black; */
     /* font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
@@ -71,6 +71,7 @@ body {
 }
 
 #movieDisplay {
+    text-align: center;
     font-size: 20px;
     font-weight: bold;
     display: block;
@@ -78,6 +79,43 @@ body {
     margin-right: auto;
     width: 50%;
 
+}
+
+#movieDisplay img {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+#youtube-preview { font-size: 20px;
+    font-weight: bold;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+#clear-history {
+    border: solid 2px white;
+border-radius: 5px 5px 5px 5px;
+/* padding: 4px; */
+/* color: black; */
+background-color: rgb(180, 123, 123);
+}
+
+#clear-history:hover {
+    background-color: rgb(250, 252, 232);
+}
+
+#history-parent {
+  text-align: center;
+
+}
+
+.history-child {
+    display: inline-block;
+    vertical-align: middle;
 }
 
 /* #recent-results {
