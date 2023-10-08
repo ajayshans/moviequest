@@ -102,25 +102,32 @@
             <br>
             <button id="history-button" class="mb-3 dark:md:hover:bg-yellow-50 p-1.5 bg-orange-300 text-black font-thin">View Historical Results</button>
             <br>
-            <button id="clear-history" class="dark:md:hover:bg-yellow-50 p-1.5 text-black my-2">clear history</button> <!--used for testing-->
+            <button id="clear-history" class="dark:md:hover:bg-yellow-50 p-1.5 text-black my-2">clear history</button> 
         </div>
         </section>
     <br>
     
-        <!-- Current Results -->
-        <section id="application" class="text-center">
-            <h2>SYNOPSIS</h2>
+            <!-- Current Results -->
+            <section id="application" class="text-center">
+                <h2>SYNOPSIS</h2>
             <div class="result-container" class="flex flex flex-row justify-between items-start mt-5"></div>
-            <div id="movieDisplay" class="text-xl font-bold block mx-0 w-2"></div>
-            <p id="messageDisplay"></p>
-            <br>
-            <h2 id="video-preview">VIDEO PREVIEW</h2>
-            <!-- Note: src attribute URL is placeholder. Needs to be removed -->
-            <iframe id="youtube-preview"
-                width="640" height="360"
-                frameborder="0"
-            ></iframe>
-        </section>
+                <div id="movieDisplay" class="text-xl font-bold block mx-0 w-2"></div>
+                <p id="messageDisplay"></p>
+                <br>
+                <h2 id="video-preview">VIDEO PREVIEW</h2>
+                <!-- Note: src attribute URL is placeholder. Needs to be removed -->
+                <iframe id="youtube-preview"
+                    width="640" height="360"
+                    frameborder="0"
+                ></iframe>
+            </section>
+            
+    <div>    
+        <div class="after-result">
+        <button id="return-button">Back to Search!</button>
+        <br>
+        <button id="retry-button">Try Again!</button>
+    </div>
 
         <!-- Historical Results -->
         <section>
