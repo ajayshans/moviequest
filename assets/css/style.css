@@ -14,16 +14,19 @@ body {
 }
 
 #intro p {
+    margin-top: 0;
     background-color: rgb(234, 37, 37);
     color: white;
     font-size: 28px;
+    padding:30px;
 }
 
 #application {
-    margin-top: 20px;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    margin-top: 90px;
+    margin-bottom: 60px;
 }
 
 .dropdown-container {
@@ -37,32 +40,39 @@ body {
     font-size: 22px
 }
 
-/* #current-results {padding: 30px;
-} */
 
 #submit-button {
-    /* padding: 9px; */
     border: 3px solid white;
     border-radius: 5px 5px 5px 5px;
     font-family: 'Hind Siliguri', sans-serif;
+    margin-bottom: 40px;
 }
-/* 
-#submit-button:hover {
-    /* background:#e22424; */
-  /* } */ 
 
-/* #history-button:hover {
-    background: #e22424;
-  } */
+#history-parent {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    padding: 35px;
+    padding-top: 45px;
+    padding-bottom: 50px;
+    background-color:rgb(18, 162, 240);
+}
 
 #history-button {
-    /* padding: 10px; */
     border: 2px solid white; 
     border-radius: 5px 5px 5px 5px;
-    /* background-color: rgb(185, 88, 15); */
-    font-family: 'Hind Siliguri', sans-serif;
-    /* font-weight: 80%; */
-    
+    margin-bottom: 20px;
+}
+
+#clear-history {
+    border: solid 2px white;
+    border-radius: 5px 5px 5px 5px;
+    margin-bottom: 20px;
+}
+
+#current-results {
+    display: none;
 }
 
 #movieDisplay {
@@ -91,18 +101,6 @@ body {
     width: 50%;
 }
 
-#clear-history {
-    border: solid 2px white;
-border-radius: 5px 5px 5px 5px;
-/* padding: 4px; */
-/* color: black; */
-background-color: rgb(180, 123, 123);
-}
-
-#clear-history:hover {
-    background-color: rgb(250, 252, 232);
-}
-
 #my-buttons {
   text-align: center;
 
@@ -112,33 +110,3 @@ background-color: rgb(180, 123, 123);
     display: inline-block;
     vertical-align: middle;
 }
-
-/* #recent-results {
-    /* padding: 10px; */
-    /* text-align: center; */
-    /* border-radius: 5px 5px 5px 5px; */
-    /* font-size: 30px; */
-    /* font-style: italic; */
-/* }
-
-#dropdown-genre {
-   
-   
-}
-
-#genre {}
-
-#release { 
-}
-    
-
-#dropdown-release {
-    /* background-color: rgb(255, 255, 255); */
-/* }
-
-#dropdown-lang {
-    /* background-color: rgb(255, 255, 255); */
-/* }
-
-
-CSS for results.html */ 
