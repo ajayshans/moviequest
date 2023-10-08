@@ -95,7 +95,6 @@ function searchAPI(genreId, decade, originalLanguage) {  // searching first for 
 }
 
 // historical results //
-// document.getElementById('recent-results').classList.add('hidden');
 document.getElementById('recent-results').style.display = 'none';
 document.getElementById('history-list').style.display = 'none';
 
