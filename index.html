@@ -101,31 +101,32 @@
             <br>
             <br>
             <div id = "history-parent">
-                <!-- <button id="history-button" class="mb-3 dark:md:hover:bg-yellow-50 p-1.5 bg-orange-300 text-black font-thin">View Historical Results</button> -->
-                <button id="history-button" class="font-semibold bg-orange-600 hover:bg-sky-700 p-2 inline-block text-white font-sans-serif text-xl text-center">View Historical Results</button>
+                <button id="history-button" class="font-semibold bg-orange-600 hover:bg-sky-700 p-2 inline-block text-white font-sans-serif text-xl text-center"><a href="#recent-results">View Historical Results</a></button>
                 <br>
                 <button id="clear-history" class="font-semibold bg-orange-600 hover:bg-sky-700 p-2 inline-block text-white font-sans-serif text-xl text-center">Clear History</button> 
             </div>
         </section>
-    <div id = result-buttons>    
-        <div class="after-result">
-        <button id="return-button">Back to Search!</button>
-        <br>
-        <button id="retry-button">Try Again!</button>
-    </div>
-
         <!-- Current Results -->
-        <section id="current-results" class="text-center">
-            <h2>SYNOPSIS</h2>
-            <div id="movieDisplay"></div>
-            <p id="messageDisplay"></p>
+        <section id="current-results">
+            <div id = "synopsis-container">
+                <h2 class="text-center italic text-3xl underline underline-offset-8 rounded p-10">SYNOPSIS</h2>
+                <div id="movieDisplay"></div>
+                <p id="messageDisplay"></p>
+            </div>
+            <div id = "preview-container">
+                <h2 id="video-preview" class="text-center italic text-3xl underline underline-offset-8 rounded p-10">VIDEO PREVIEW</h2>
+                <iframe id="youtube-preview"
+                    width="640" height="450"
+                    frameborder="0"
+                ></iframe>
+            </div>
+        </section>
+        <br>
+        <section>    
+            <div id="result-buttons">
+            <button id="return-button" class="font-semibold bg-orange-600 hover:bg-sky-700 p-2 inline-block text-white font-sans-serif text-xl text-center"><a href="#page-title">Set New Inputs</a></button>
             <br>
-            <h2 id="video-preview">VIDEO PREVIEW</h2>
-            <!-- Note: src attribute URL is placeholder. Needs to be removed -->
-            <iframe id="youtube-preview"
-                width="640" height="360"
-                frameborder="0"
-            ></iframe>
+            <button id="retry-button" class="font-semibold bg-orange-600 hover:bg-sky-700 p-2 inline-block text-white font-sans-serif text-xl text-center"><a href="#current-results">Next Movie</a></button>
         </section>
 
         <!-- Historical Results -->
