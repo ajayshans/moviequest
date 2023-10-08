@@ -1,40 +1,49 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
-/* NOTE: The below will get removed during transition to tailwind CSS */
 body {
     background-color: rgb(26, 26, 26);
-    /* color: rgb(255, 255, 255); */
     font-family: 'Hind Siliguri', sans-serif;
+    /* display: flex;
+    flex-direction: column; */
     /* font-weight: 200%; */
 }
 
-/* #intro {
-} */
+
+#page-title {
+    background-color: rgb(18, 162, 240);
+    margin-top: 0;
+    padding: 30px;
+    font-family: 'Cairo Play', sans-serif;
+    text-shadow: white 5px;
+}
+
+#intro p {
+    background-color: rgb(234, 37, 37);
+    color: white;
+    font-size: 28px;
+}
+
+#application {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
 
 .dropdown-container {
+    font-size: 30px;
     display: inline-block;
     border: 3px solid rgb(235, 235, 235);
     border-radius: 5px 5px 5px 5px;
     padding: 0;
-    margin-right: 25px; 
-    /* background-color: rgb(249, 52, 52); */
+    margin-left: 100px;
+    margin-right: 100px; 
     /* color: black; */
     /* font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
     /* font-size: 15px; */
     /* padding: 5px; */
 } 
 
-#page-title {
-    /* margin-top: 70px;
-    margin-bottom: 30px; */
-    /* padding: 20px; */
-    /* text-align: center; */
-    /* font-size: 500%;   */
-    /* font-style: italic;  */
-    font-family: 'Cairo Play', sans-serif;
-    text-shadow: white 5px;
+.dropdown-container label {
+    font-size: 22px
 }
 
 #application {padding: 30px;
@@ -108,7 +117,7 @@ background-color: rgb(180, 123, 123);
     background-color: rgb(250, 252, 232);
 }
 
-#history-parent {
+#my-buttons {
   text-align: center;
 
 }
