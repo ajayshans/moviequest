@@ -31,7 +31,7 @@ Have a quality README (with unique name, description, technologies used, screens
 ![Youtube trailer](<Screenshot 2023-10-08 231637.png>)
 
 ## Link to Deployed Applications
-To use this webpage and start your own movie quest, please use this URL: 
+To use this webpage and start your own movie quest, please use this URL: https://ajayshans.github.io/moviequest/
 
 ## Team Members + Roles
 Ajay - Project Lead | Youtube API Functionality, Documentation, Base HTML.
