@@ -101,6 +101,8 @@ document.getElementById('history-list').style.display = 'none';
 
 function displaySavedMovies() {
     document.getElementById('recent-results').style.display = 'block';
+    document.getElementById('history-list').style.display = 'block';
+    document.getElementById('history-list').style.textAlign = 'center';
     try {
         var savedMovies = JSON.parse(localStorage.getItem('movieData'));
 
