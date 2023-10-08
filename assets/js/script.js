@@ -5,7 +5,7 @@ var lastGenreId, lastDecade, lastOriginalLanguage;
 var youtubePreview = document.getElementById('youtube-preview')
 
 function getVideoURL(sampleTitle) {
-    var ytApiKey = "AIzaSyCgh0yjkM8kJ9Pb3eEal4iKYSrUww4_3Ks"
+    var ytApiKey = "AIzaSyB8PzB4thIJ1yyzTuJhkEhy3FlEEIZVsJg"
     searchInput = sampleTitle.toLowerCase().replace(" ", "+") + "+movie+trailer"
     var searchResult = "https://www.googleapis.com/youtube/v3/search?key=" + ytApiKey + "&part=snippet&type=video&q=" + searchInput;
 
@@ -71,7 +71,7 @@ function searchAPI(genreId, decade, originalLanguage) {  // searching first for 
             movieDisplay.innerHTML = ` 
                 <h2>${randomMovie.title}</h2>
                 <p>${randomMovie.overview}</p>
-                <img src="https://image.tmdb.org/t/p/w500${randomMovie.poster_path}" alt="${randomMovie.title}" />
+                <img src="https://image.tmdb.org/t/p/w500${randomMovie.poster_path}" alt="${randomMovie.title}">
             `;
 
             // save data //
@@ -79,9 +79,14 @@ function searchAPI(genreId, decade, originalLanguage) {  // searching first for 
 
 
             document.getElementById('intro').classList.add('hidden');
-            document.getElementById('application').classList.add('hidden');
-            document.getElementById('retry-button').style.display = 'block';
-            document.getElementById('return-button').style.display = 'block';
+            document.getElementById('application').style.display = 'none';
+            document.getElementById('current-results').style.display = 'flex';
+            document.getElementById('result-buttons').style.display = 'flex';
+            document.getElementById('my-buttons').classList.add('hidden');
+            document.getElementById('retry-button').style.display = 'flex';
+            document.getElementById('return-button').style.display = 'flex';
+            document.getElementById('recent-results').style.display = 'none';
+            document.getElementById('history-list').style.display = 'none';
         }
     })
     .catch(function(error) {
@@ -90,10 +95,13 @@ function searchAPI(genreId, decade, originalLanguage) {  // searching first for 
 }
 
 // historical results //
-document.getElementById('recent-results').classList.add('hidden');
+document.getElementById('recent-results').style.display = 'none';
+document.getElementById('history-list').style.display = 'none';
 
 function displaySavedMovies() {
     document.getElementById('recent-results').style.display = 'block';
+    document.getElementById('history-list').style.display = 'block';
+    document.getElementById('history-list').style.textAlign = 'center';
     try {
         var savedMovies = JSON.parse(localStorage.getItem('movieData'));
 
@@ -116,14 +124,19 @@ function displaySavedMovies() {
 document.getElementById('history-button').addEventListener('click', displaySavedMovies);
 
 // return buttons //
-document.getElementById('retry-button').classList.add('hidden');
-document.getElementById('return-button').classList.add('hidden');
+document.getElementById('retry-button').style.display = 'none';
+document.getElementById('return-button').style.display = 'none';
 
 document.getElementById('return-button').addEventListener('click', function() { 
     document.getElementById('intro').classList.remove('hidden');
-    document.getElementById('application').classList.remove('hidden');
+    document.getElementById('application').style.display = 'flex';
+    document.getElementById('current-results').style.display = 'none';
+    document.getElementById('result-buttons').style.display = 'flex';
+    document.getElementById('my-buttons').classList.remove('hidden');
     document.getElementById('retry-button').style.display = 'none';
     document.getElementById('return-button').style.display = 'none';
+    document.getElementById('recent-results').style.display = 'none';
+    document.getElementById('history-list').style.display = 'none';
 });
 
 function retrySearch() {
