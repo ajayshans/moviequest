@@ -2,9 +2,6 @@
 body {
     background-color: rgb(26, 26, 26);
     font-family: 'Hind Siliguri', sans-serif;
-    /* display: flex;
-    flex-direction: column; */
-    /* font-weight: 200%; */
 }
 
 
@@ -31,35 +28,23 @@ body {
 
 .dropdown-container {
     font-size: 30px;
-    display: inline-block;
     border: 3px solid rgb(235, 235, 235);
     border-radius: 5px 5px 5px 5px;
     padding: 0;
-    margin-left: 100px;
-    margin-right: 100px; 
-    /* color: black; */
-    /* font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
-    /* font-size: 15px; */
-    /* padding: 5px; */
 } 
 
 .dropdown-container label {
     font-size: 22px
 }
 
-#application {padding: 30px;
-    /* text-align: center; */
-}
+/* #current-results {padding: 30px;
+} */
 
 #submit-button {
     /* padding: 9px; */
     border: 3px solid white;
     border-radius: 5px 5px 5px 5px;
-    /* background-color: rgb(236, 243, 34); */
-    /* color: rgb(0, 0, 0); */
-    /* margin-bottom: 10px; */
     font-family: 'Hind Siliguri', sans-serif;
-    /* font-weight: 100%; */
 }
 /* 
 #submit-button:hover {
