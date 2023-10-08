@@ -81,9 +81,12 @@ function searchAPI(genreId, decade, originalLanguage) {  // searching first for 
             document.getElementById('intro').classList.add('hidden');
             document.getElementById('application').style.display = 'none';
             document.getElementById('current-results').style.display = 'flex';
+            document.getElementById('result-buttons').style.display = 'flex';
             document.getElementById('my-buttons').classList.add('hidden');
             document.getElementById('retry-button').style.display = 'flex';
             document.getElementById('return-button').style.display = 'flex';
+            document.getElementById('recent-results').style.display = 'none';
+            document.getElementById('history-list').style.display = 'none';
         }
     })
     .catch(function(error) {
@@ -92,7 +95,9 @@ function searchAPI(genreId, decade, originalLanguage) {  // searching first for 
 }
 
 // historical results //
-document.getElementById('recent-results').classList.add('hidden');
+// document.getElementById('recent-results').classList.add('hidden');
+document.getElementById('recent-results').style.display = 'none';
+document.getElementById('history-list').style.display = 'none';
 
 function displaySavedMovies() {
     document.getElementById('recent-results').style.display = 'block';
@@ -125,9 +130,12 @@ document.getElementById('return-button').addEventListener('click', function() {
     document.getElementById('intro').classList.remove('hidden');
     document.getElementById('application').style.display = 'flex';
     document.getElementById('current-results').style.display = 'none';
+    document.getElementById('result-buttons').style.display = 'flex';
     document.getElementById('my-buttons').classList.remove('hidden');
     document.getElementById('retry-button').style.display = 'none';
     document.getElementById('return-button').style.display = 'none';
+    document.getElementById('recent-results').style.display = 'none';
+    document.getElementById('history-list').style.display = 'none';
 });
 
 function retrySearch() {
