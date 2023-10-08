@@ -100,9 +100,9 @@
             <div class="sub-hist">
             <button id = "submit-button" class="opacity-100 dark:md:hover:bg-yellow-50 p-1.5 bg-yellow-300 text-black mb-3 font-sans-serif font-thin">Find Your Movie!</button>
             <br>
-            <button id="history-button" class=" dark:md:hover:bg-yellow-50 p-1.5 bg-orange-300 text-black font-thin">View Historical Results</button>
+            <button id="history-button" class="mb-3 dark:md:hover:bg-yellow-50 p-1.5 bg-orange-300 text-black font-thin">View Historical Results</button>
             <br>
-            <button id="clear-history" class="dark:md:hover:bg-yellow-50">clear history</button> <!--used for testing-->
+            <button id="clear-history" class="dark:md:hover:bg-yellow-50 p-1 text-black">clear history</button> <!--used for testing-->
         </div>
         </section>
     <br>
@@ -110,8 +110,8 @@
         <!-- Current Results -->
         <section id="application" class="text-center">
             <h2>SYNOPSIS</h2>
-            <div class="result-container"></div>
-            <div id="movieDisplay"></div>
+            <div class="result-container" class="flex flex flex-row justify-between items-start mt-5"></div>
+            <div id="movieDisplay" class="text-xl font-bold block mx-0 w-2"></div>
             <p id="messageDisplay"></p>
             <br>
             <h2 id="video-preview">VIDEO PREVIEW</h2>

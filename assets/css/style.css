@@ -67,15 +67,15 @@ body {
     /* background-color: rgb(185, 88, 15); */
     font-family: 'Hind Siliguri', sans-serif;
     /* font-weight: 80%; */
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
     
 }
 
 #clear-history {
     border: solid 2px white;
 border-radius: 5px 5px 5px 5px;
-padding: 4px;
-color: black;
+/* padding: 4px; */
+/* color: black; */
 background-color: rgb(180, 123, 123);
 }
 
@@ -85,21 +85,21 @@ background-color: rgb(180, 123, 123);
 
 .result-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: row; 
     justify-content: space-between;
     align-items: flex-start;
-    margin-top: 20px; /* Adjust the margin as needed */
+    margin-top: 20px;
 }
+
 
 #movieDisplay {
     font-size: 20px;
     font-weight: bold;
     display: block;
     margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-
-}
+    margin-right: auto; 
+     width: 50%; 
+ }  
 
 #youtube-preview {
     display: block;
