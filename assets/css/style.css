@@ -1,91 +1,125 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
-/* NOTE: The below will get removed during transition to tailwind CSS */
 body {
     background-color: rgb(26, 26, 26);
-    /* color: rgb(255, 255, 255); */
     font-family: 'Hind Siliguri', sans-serif;
-    /* font-weight: 200%; */
 }
 
-/* #intro {
-} */
-
-.dropdown-container {
-    display: inline-block;
-    border: 3px solid rgb(235, 235, 235);
-    border-radius: 5px 5px 5px 5px;
-    padding: 0;
-    margin-right: 25px; 
-    /* background-color: rgb(249, 52, 52); */
-    /* color: black; */
-    /* font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
-    /* font-size: 15px; */
-    /* padding: 5px; */
-} 
-
 #page-title {
-    /* margin-top: 70px;
-    margin-bottom: 30px; */
-    /* padding: 20px; */
-    /* text-align: center; */
-    /* font-size: 500%;   */
-    /* font-style: italic;  */
+    background-color: rgb(18, 162, 240);
+    margin-top: 0;
+    margin-bottom: -25px;
+    padding: 30px;
     font-family: 'Cairo Play', sans-serif;
     text-shadow: white 5px;
 }
 
-#application {padding: 30px;
-    /* text-align: center; */
+#intro p {
+    margin-top: 0;
+    background-color: rgb(234, 37, 37);
+    color: white;
+    font-size: 28px;
+    padding:30px;
 }
+
+#application {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 90px;
+    margin-bottom: 60px;
+}
+
+.dropdown-container {
+    font-size: 30px;
+    border: 3px solid rgb(235, 235, 235);
+    border-radius: 5px 5px 5px 5px;
+    padding: 0;
+} 
+
+.dropdown-container label {
+    font-size: 22px
+}
+
 
 #submit-button {
-    /* padding: 9px; */
     border: 3px solid white;
     border-radius: 5px 5px 5px 5px;
-    /* background-color: rgb(236, 243, 34); */
-    /* color: rgb(0, 0, 0); */
-    /* margin-bottom: 10px; */
     font-family: 'Hind Siliguri', sans-serif;
-    /* font-weight: 100%; */
+    margin-bottom: 40px;
 }
-/* 
-#submit-button:hover {
-    /* background:#e22424; */
-  /* } */ 
 
-/* #history-button:hover {
-    background: #e22424;
-  } */
+#history-parent {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    padding: 35px;
+    padding-top: 45px;
+    padding-bottom: 50px;
+    background-color:rgb(18, 162, 240);
+}
+
+#result-buttons {
+        display: none;
+        flex-direction: row;
+        justify-content: center;
+        gap: 15px;
+}
 
 #history-button {
-    /* padding: 10px; */
     border: 2px solid white; 
     border-radius: 5px 5px 5px 5px;
-    /* background-color: rgb(185, 88, 15); */
-    font-family: 'Hind Siliguri', sans-serif;
-    /* font-weight: 80%; */
-    
+    margin-bottom: 20px;
+}
+
+#clear-history {
+    border: solid 2px white;
+    border-radius: 5px 5px 5px 5px;
+    margin-bottom: 20px;
+}
+
+#return-button {
+    border: solid 2px white;
+    border-radius: 5px 5px 5px 5px;
+    margin-bottom: 20px;
+}
+
+#retry-button {
+    border: solid 2px white;
+    border-radius: 5px 5px 5px 5px;
+    margin-bottom: 20px;
+}
+#current-results {
+    display: none;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#synopsis-container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#preview-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #movieDisplay {
     text-align: center;
     font-size: 20px;
     font-weight: bold;
+    padding-bottom: 20px;
+}
+
+#synopsis-container img {
+    text-align: center;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-
+    padding-left: 540px;
 }
-
-#movieDisplay img {
-    display: flex;
-    justify-content: center;
-}
-
 
 
 #youtube-preview { font-size: 20px;
@@ -96,54 +130,6 @@ body {
     width: 50%;
 }
 
-#clear-history {
-    border: solid 2px white;
-border-radius: 5px 5px 5px 5px;
-/* padding: 4px; */
-/* color: black; */
-background-color: rgb(180, 123, 123);
-}
-
-#clear-history:hover {
-    background-color: rgb(250, 252, 232);
-}
-
-#history-parent {
+#my-buttons {
   text-align: center;
-
 }
-
-.history-child {
-    display: inline-block;
-    vertical-align: middle;
-}
-
-/* #recent-results {
-    /* padding: 10px; */
-    /* text-align: center; */
-    /* border-radius: 5px 5px 5px 5px; */
-    /* font-size: 30px; */
-    /* font-style: italic; */
-/* }
-
-#dropdown-genre {
-   
-   
-}
-
-#genre {}
-
-#release { 
-}
-    
-
-#dropdown-release {
-    /* background-color: rgb(255, 255, 255); */
-/* }
-
-#dropdown-lang {
-    /* background-color: rgb(255, 255, 255); */
-/* }
-
-
-CSS for results.html */ 

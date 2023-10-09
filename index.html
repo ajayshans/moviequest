@@ -16,7 +16,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri&display=swap" rel="stylesheet">
-    <!-- Link to Tailwind CSS Framework. This is with Play CDN - may need an UPDATE -->
+    <!-- Link to Tailwind CSS Framework. This is with Play CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Links for reset and non-framework CSS Styling -->
     <link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
@@ -26,28 +26,20 @@
 <body class="text-white font-extralight">
     <header>
         <h1 id = "page-title" class = "drop-shadow-2xl text text-center font-Rowdies text-8xl font-bold my-16 p-1">Movie Quest 🧙‍♂️</h1>
-        <!-- Nav Bar -->
-        <!-- <nav class = nav-bar>
-            <ul>
-                <li class=""> <a href="#application">Application</a> </li>
-                <li> <a href="#history">Previous Results</a> </li>
-            </ul>
-        </nav> -->
     </header>
     <br>
     <main>
         <!-- Intro -->
         <section id = "intro" class ="text-xl leading-7 text-center">
             <p>Looking for something to watch? <br>
-                Movie Quest is here to help! Enter your desired filters below to begin.</p>
+                Movie Quest is here to help! Choose your inputs and click the <span class = "text-green-300">green</span> button below to begin:</p>
         </section>
     <br>
         <!-- Current Search -->
         <section id = "application" class="text-center">
-            <!-- TODO: Add dropdowns using HTML. Replace later with Tailwind CSS Dropdown -->
-            <div class="dropdown-container inline inline-block p-1">
-                <label id="genre" for="dropdown-genre" class="font-semibold bg-red-600 p-1 inline-block text-black font-sans text-base">Genre:</label>
-                <select id="dropdown-genre" class="text-white bg-black">
+            <div class="dropdown-container">
+                <label id="genre" for="dropdown-genre" class="font-semibold bg-red-600 p-4 inline-block text-white font-sans text-base">Genre:</label>
+                <select id="dropdown-genre" class="text-white bg-black hover:bg-sky-700">
                     <option value="Any">Any</option>
                     <option value="18">Drama</option>
                     <option value="53">Thriller</option>
@@ -60,8 +52,8 @@
             </div>
 
             <div class="dropdown-container">
-                <label id="release" for="dropdown-release" class="font-semibold bg-red-600 p-1 inline-block text-black font-sans text-base">Release Date:</label>
-                <select id="dropdown-release" class="text-white bg-black">
+                <label id="release" for="dropdown-release" class="font-semibold bg-red-600 p-4 inline-block text-white font-sans text-base">Release Date:</label>
+                <select id="dropdown-release" class="text-white bg-black hover:bg-sky-700">
                     <option value="Any">Any</option>
                     <option value="1910">1910's</option>
                     <option value="1920">1920's</option>
@@ -79,8 +71,8 @@
             </div>
 
             <div class="dropdown-container">
-                <label for="dropdown-lang" class="font-semibold bg-red-600 p-1 inline-block text-black font-sans text-base">Language:</label>
-                <select id="dropdown-lang" class="text-white bg-black">
+                <label for="dropdown-lang" class="font-semibold bg-red-600 p-4 inline-block text-white font-sans text-base">Language:</label>
+                <select id="dropdown-lang" class="text-white bg-black hover:bg-sky-700">
                     <option value="Any">Any</option>
                     <option value="en">English</option>
                     <option value="es">Spanish</option>
@@ -95,16 +87,8 @@
                     <option value="id">Indonesian</option>
                 </select>
             </div>
-            <br>
-            <br>
-            <div class="sub-hist">
-            <button id = "submit-button" class="opacity-100 dark:md:hover:bg-yellow-50 p-1.5 bg-yellow-300 text-black mb-5 my-2.5 font-sans-serif font-thin">Find Your Movie!</button>
-            <br>
-            <button id="history-button" class="mb-3 dark:md:hover:bg-yellow-50 p-1.5 bg-orange-300 text-black font-thin">View Historical Results</button>
-            <br>
-            <button id="clear-history" class="dark:md:hover:bg-yellow-50 p-1.5 text-black my-2">clear history</button> 
-        </div>
         </section>
+<<<<<<< HEAD
     <br>
     
             <!-- Current Results -->
@@ -113,25 +97,45 @@
             <div class="result-container" class="flex flex flex-row justify-between items-start mt-5"></div>
                 <div id="movieDisplay" class="text-xl font-bold block mx-0 w-2"></div>
                 <p id="messageDisplay"></p>
+=======
+        <!-- Buttons -->
+        <section id = "my-buttons">
+            <button id = "submit-button" class="font-semibold bg-green-600 hover:bg-sky-700 p-3 inline-block text-white font-sans-serif text-4xl text-center">Start Movie Quest! 🚀</button>
+            <br>
+            <br>
+            <div id = "history-parent">
+                <button id="history-button" class="font-semibold bg-orange-300 hover:bg-sky-700 p-2 inline-block text-black font-sans-serif text-xl text-center"><a href="#recent-results">View Historical Results</a></button>
+>>>>>>> 52e123159c0fcbab269a7bb025015cce61fece55
                 <br>
-                <h2 id="video-preview">VIDEO PREVIEW</h2>
-                <!-- Note: src attribute URL is placeholder. Needs to be removed -->
+                <button id="clear-history" class="font-semibold bg-orange-300 hover:bg-sky-700 p-2 inline-block text-black font-sans-serif text-xl text-center">Clear History</button> 
+            </div>
+        </section>
+        <!-- Current Results -->
+        <section id="current-results">
+            <div id = "synopsis-container">
+                <h2 class="text-center italic text-3xl underline underline-offset-8 rounded p-10">SYNOPSIS</h2>
+                <div id="movieDisplay"></div>
+                <p id="messageDisplay"></p>
+            </div>
+            <div id = "preview-container">
+                <h2 id="video-preview" class="text-center italic text-3xl underline underline-offset-8 rounded p-10">VIDEO PREVIEW</h2>
                 <iframe id="youtube-preview"
-                    width="640" height="360"
+                    width="640" height="450"
                     frameborder="0"
                 ></iframe>
-            </section>
-            
-    <div>    
-        <div class="after-result">
-        <button id="return-button">Back to Search!</button>
+            </div>
+        </section>
         <br>
-        <button id="retry-button">Try Again!</button>
-    </div>
+        <section>    
+            <div id="result-buttons">
+            <button id="return-button" class="font-semibold bg-orange-300 hover:bg-sky-700 p-2 inline-block text-black font-sans-serif text-xl text-center"><a href="#page-title">Start Again?</a></button>
+            <br>
+            <button id="retry-button" class="font-semibold bg-orange-300 hover:bg-sky-700 p-2 inline-block text-black font-sans-serif text-xl text-center"><a href="#current-results">Next Movie</a></button>
+        </section>
 
         <!-- Historical Results -->
         <section>
-            <h2 id ="recent-results" class="text-center italic text-3xl underline underline-offset-8 rounded p-10">Recent Results:</h2>
+            <h2 id ="recent-results" class="text-center italic text-3xl underline underline-offset-8 rounded p-10">Historical Results</h2>
             <ol id = "history-list"></ol>
         </section>
     </main>
