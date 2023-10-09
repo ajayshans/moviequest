@@ -26,18 +26,18 @@ Have a clean repository that meets quality coding standards (file structure, nam
 Have a quality README (with unique name, description, technologies used, screenshot, and link to deployed application).
 
 ## Web Application Preview
-![Main screen](<webpage-preview-1>)
-![Random movie chosen](<webpage-preview-2>)
-![Youtube trailer](<webpage-preview-3>)
+![Main Screen](assets/images/webpage-preview-1.png)
+![Random movie chosen](assets/images/webpage-preview-2.png)
+![Youtube trailer](assets/images/webpage-preview-3.png)
 
 ## Link to Deployed Application
 To use this webpage and start your own movie quest, please use this URL: https://ajayshans.github.io/moviequest/
 
 ## Acknowledgments
 
-Youtube API: https://developers.google.com/youtube/v3/docs 
-TMDB API: https://developer.themoviedb.org/reference/intro/getting-started 
-Tailwind CSS Framework: https://tailwindcss.com/docs/installation
+* Youtube API: https://developers.google.com/youtube/v3/docs 
+* TMDB API: https://developer.themoviedb.org/reference/intro/getting-started 
+* Tailwind CSS Framework: https://tailwindcss.com/docs/installation
 
 ## Team Members + Roles
 * Ajay: Project Lead | Youtube API Functionality, Documentation, Base HTML.
